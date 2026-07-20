@@ -124,7 +124,7 @@ export default function ConsultModal() {
             </div>
             {status === "error" && (
               <p className="modal__status modal__status--error">
-                Ocurrió un error. Intente nuevamente o escríbanos a hola@casinospuntadeleste.com.
+                Ocurrió un error. Intente nuevamente o escríbanos a contacto@casinospuntadeleste.com.
               </p>
             )}
             <button type="submit" className="modal__submit" disabled={status === "loading"}>

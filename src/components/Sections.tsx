@@ -264,7 +264,7 @@ export function Cta() {
           horas.
         </p>
         <div className="cta__buttons">
-          <a className="btn-primary" href="mailto:hola@casinospuntadeleste.com">
+          <a className="btn-primary" href="mailto:contacto@casinospuntadeleste.com">
             Contáctenos
           </a>
           <a className="btn-ghost" href="#servicios">
@@ -312,7 +312,7 @@ export function Footer() {
               <ul>
                 <li>Punta del Este</li>
                 <li>Maldonado, Uruguay</li>
-                <li>hola@casinospuntadeleste.com</li>
+                <li>contacto@casinospuntadeleste.com</li>
               </ul>
             </div>
           </div>
