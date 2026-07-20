@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { saveLead } from "@/lib/leads";
+import { handleLead } from "@/lib/leads";
 
 export const runtime = "nodejs";
 
@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    await saveLead({
+    await handleLead({
       nombre: nombre.trim(),
       email: email.trim(),
       empresa: typeof empresa === "string" ? empresa.trim() : "",
