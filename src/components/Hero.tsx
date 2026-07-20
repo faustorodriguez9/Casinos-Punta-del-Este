@@ -1,10 +1,37 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { useConsultModal } from "./ConsultModalContext";
 import { PlayIcon } from "./icons";
 
 export default function Hero() {
   const { openModal } = useConsultModal();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Reinforce autoplay: some browsers don't start a muted background video
+  // until the element is ready or the tab becomes visible again. We retry on
+  // mount, when the video can play, and on visibility changes.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const tryPlay = () => {
+      const p = video.play();
+      if (p && typeof p.catch === "function") p.catch(() => {});
+    };
+
+    tryPlay();
+    video.addEventListener("canplay", tryPlay);
+    const onVisible = () => {
+      if (document.visibilityState === "visible") tryPlay();
+    };
+    document.addEventListener("visibilitychange", onVisible);
+
+    return () => {
+      video.removeEventListener("canplay", tryPlay);
+      document.removeEventListener("visibilitychange", onVisible);
+    };
+  }, []);
 
   return (
     <section className="hero">
@@ -41,13 +68,14 @@ export default function Hero() {
           </div>
         </div>
         <video
+          ref={videoRef}
           className="hero__video"
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
-          poster="/assets/PHOTO-2026-07-20-16-56-52.jpg"
+          poster="/assets/hero-poster.jpg"
         >
           <source src="/assets/0720.mp4" type="video/mp4" />
         </video>
