@@ -166,18 +166,30 @@ export function Clientes() {
           </div>
 
           <div className="cipriani-card__media">
-            <Image
-              src="/assets/PHOTO-2026-07-20-16-56-52.jpg"
-              alt="Render del casino y piscina del complejo Cipriani"
-              width={720}
-              height={480}
-            />
-            <Image
-              src="/assets/PHOTO-2026-07-20-16-57-15.jpg"
-              alt="Vista aérea de las torres del complejo Cipriani"
-              width={720}
-              height={480}
-            />
+            <figure className="cipriani-shot">
+              <Image
+                src="/assets/PHOTO-2026-07-20-16-56-52.jpg"
+                alt="Render del casino del complejo Cipriani"
+                width={1600}
+                height={1014}
+                quality={90}
+                sizes="(max-width: 1024px) 100vw, 460px"
+                style={{ width: "100%", height: "auto" }}
+              />
+              <figcaption>Casa Cipriani · Casino, predio del Hotel San Rafael</figcaption>
+            </figure>
+            <figure className="cipriani-shot">
+              <Image
+                src="/assets/PHOTO-2026-07-20-16-57-15.jpg"
+                alt="Vista aérea de las torres del complejo Cipriani"
+                width={1600}
+                height={794}
+                quality={90}
+                sizes="(max-width: 1024px) 100vw, 460px"
+                style={{ width: "100%", height: "auto" }}
+              />
+              <figcaption>Las torres sobre la Playa Brava · Punta del Este</figcaption>
+            </figure>
           </div>
         </div>
 

@@ -582,16 +582,31 @@ button {
 }
 
 .cipriani-card__media {
-  min-height: 560px;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  background: #0b1f3d;
+  padding: 20px;
 }
 
-.cipriani-card__media img {
+.cipriani-shot {
+  margin: 0;
+}
+
+.cipriani-shot img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.cipriani-shot figcaption {
+  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #8fa6c2;
+  text-transform: uppercase;
 }
 
 .clientes__note {
