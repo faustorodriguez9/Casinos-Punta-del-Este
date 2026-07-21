@@ -13,8 +13,8 @@ export default function Header() {
           <Image
             src="/assets/logo-casinos.png"
             alt="Casinos Punta del Este"
-            width={148}
-            height={148}
+            width={685}
+            height={545}
             priority
             className={`header__logo${animating ? " is-animating" : ""}`}
             onClick={() => {
