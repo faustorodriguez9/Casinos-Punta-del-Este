@@ -5,8 +5,9 @@ import ConsultModal from "@/components/ConsultModal";
 import { ConsultModalProvider } from "@/components/ConsultModalContext";
 import { Metrics, Servicios, Equipo, Cta, Footer } from "@/components/Sections";
 
-// Revalidate the RSS-backed news section every 3 hours (ISR).
-export const revalidate = 10800;
+// Revalidate the RSS-backed news section every hour (ISR) so Yogonet's
+// latest articles get incorporated automatically.
+export const revalidate = 3600;
 
 export default function Home() {
   return (

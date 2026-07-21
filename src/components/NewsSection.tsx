@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { getNews } from "@/lib/news";
+import { getYogonetNews } from "@/lib/news";
+import NewsCarousel from "./NewsCarousel";
 
 export default async function NewsSection() {
-  const news = await getNews();
+  const news = await getYogonetNews();
 
   return (
     <section className="section-dark" id="blog">
@@ -14,7 +14,7 @@ export default async function NewsSection() {
           </div>
           <a
             className="blog__viewall"
-            href="https://www.yogonet.com/international/"
+            href="https://www.yogonet.com/latinoamerica/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -22,36 +22,7 @@ export default async function NewsSection() {
           </a>
         </div>
 
-        <div className="blog__grid">
-          {news.map((n) => (
-            <a
-              className="news-card"
-              key={n.source}
-              href={n.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="news-card__media">
-                <Image
-                  src={n.logo}
-                  alt={n.source}
-                  width={180}
-                  height={90}
-                  style={{ objectFit: "contain", width: "auto", height: "auto" }}
-                />
-              </div>
-              <div className="news-card__body">
-                <div className="news-card__meta">
-                  <span className="news-card__source">{n.source}</span>
-                  {n.date && <span className="news-card__date">· {n.date}</span>}
-                </div>
-                <h3 className="news-card__title">{n.title}</h3>
-                <p className="news-card__desc">{n.description}</p>
-                <span className="news-card__cta">Leer más →</span>
-              </div>
-            </a>
-          ))}
-        </div>
+        <NewsCarousel items={news} />
       </div>
     </section>
   );

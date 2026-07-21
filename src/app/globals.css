@@ -647,13 +647,76 @@ button {
   color: #eef4fb;
 }
 
-.blog__grid {
+/* Carrusel de noticias */
+.news-carousel {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+}
+
+.news-viewport {
+  overflow: hidden;
+}
+
+.news-track {
+  display: flex;
   gap: 32px;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.news-arrow {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  border: 1px solid rgba(147, 180, 215, 0.35);
+  background: rgba(147, 180, 215, 0.06);
+  color: #cfe2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+.news-arrow:hover:not(:disabled) {
+  background: #4a90d9;
+  border-color: #4a90d9;
+  color: #fff;
+}
+
+.news-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.news-dots {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 36px;
+}
+
+.news-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(147, 180, 215, 0.3);
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.news-dot.is-active {
+  background: #4a90d9;
+  transform: scale(1.25);
 }
 
 .news-card {
+  flex: 0 0 calc((100% - 64px) / 3);
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -1108,7 +1171,6 @@ button {
     border-right: none;
   }
   .services__grid,
-  .blog__grid,
   .equipo__grid {
     grid-template-columns: 1fr;
   }
@@ -1120,6 +1182,14 @@ button {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+  }
+  /* Carrusel: 2 tarjetas visibles en tablet */
+  .news-card {
+    flex-basis: calc((100% - 32px) / 2);
+  }
+  .news-arrow {
+    width: 44px;
+    height: 44px;
   }
 }
 
@@ -1176,5 +1246,16 @@ button {
   }
   .btn-consult {
     margin-left: 0;
+  }
+  /* Carrusel: 1 tarjeta visible en celular */
+  .news-card {
+    flex-basis: 100%;
+  }
+  .news-carousel {
+    gap: 8px;
+  }
+  .news-arrow {
+    width: 40px;
+    height: 40px;
   }
 }
