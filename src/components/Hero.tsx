@@ -36,7 +36,7 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="hero__left">
-        <span className="eyebrow">Consultoría iGaming · Punta del Este, Uruguay</span>
+        <span className="eyebrow">Estrategia, Experiencia e Información</span>
         <h1 className="hero__title">
           Estrategia digital para la nueva generación del{" "}
           <span className="accent">iGaming</span>
