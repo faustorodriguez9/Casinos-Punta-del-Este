@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import "./globals.css";
+import ChatWidget from "@/components/ChatWidget";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -63,7 +64,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={jost.variable}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <ChatWidget />
+      </body>
     </html>
   );
 }
