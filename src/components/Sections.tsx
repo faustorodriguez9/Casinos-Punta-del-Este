@@ -3,8 +3,8 @@ import { InstagramIcon, LinkedInIcon } from "./icons";
 
 /* ---------------------------------------------------------------- Metrics */
 const METRICS = [
-  { num: "+15", label: "años en gestión de juego" },
-  { num: "+30", label: "operadores asesorados" },
+  { num: "+30", label: "años en gestión de juego" },
+  { num: "+10", label: "operadores asesorados" },
   { num: "LatAm", label: "foco regional & regulatorio" },
   { num: "24/7", label: "acompañamiento operativo" },
 ];
