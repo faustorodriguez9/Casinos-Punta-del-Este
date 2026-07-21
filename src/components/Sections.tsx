@@ -3,10 +3,10 @@ import { InstagramIcon, LinkedInIcon } from "./icons";
 
 /* ---------------------------------------------------------------- Metrics */
 const METRICS = [
-  { num: "+30", label: "años en gestión de juego" },
-  { num: "+10", label: "operadores asesorados" },
-  { num: "LatAm", label: "foco regional & regulatorio" },
-  { num: "24/7", label: "acompañamiento operativo" },
+  { num: "+30", label: "Años en gestión de juego" },
+  { num: "+10", label: "Operadores asesorados" },
+  { num: "LatAm", label: "Foco regional & regulatorio" },
+  { num: "24/7", label: "Acompañamiento operativo" },
 ];
 
 export function Metrics() {
