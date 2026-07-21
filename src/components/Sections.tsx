@@ -311,7 +311,7 @@ export function Cta() {
   return (
     <section className="cta" id="contacto">
       <div className="cta__inner">
-        <span className="eyebrow-dark">Contacto</span>
+        <span className="eyebrow-light">Contacto</span>
         <h2 className="cta__title">
           Construyamos la próxima gran operación de iGaming
         </h2>
@@ -323,7 +323,7 @@ export function Cta() {
           <a className="btn-primary" href="mailto:contacto@casinospuntadeleste.com">
             Contáctenos
           </a>
-          <a className="btn-ghost" href="#servicios">
+          <a className="btn-ghost btn-ghost--onlight" href="#servicios">
             Ver servicios
           </a>
         </div>
