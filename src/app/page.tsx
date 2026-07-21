@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import NewsSection from "@/components/NewsSection";
 import ConsultModal from "@/components/ConsultModal";
 import { ConsultModalProvider } from "@/components/ConsultModalContext";
-import { Metrics, Servicios, Clientes, Equipo, Cta, Footer } from "@/components/Sections";
+import { Metrics, Servicios, Equipo, Cta, Footer } from "@/components/Sections";
 
 // Revalidate the RSS-backed news section every 3 hours (ISR).
 export const revalidate = 10800;
@@ -16,7 +16,6 @@ export default function Home() {
         <Hero />
         <Metrics />
         <Servicios />
-        <Clientes />
         <NewsSection />
         <Equipo />
         <Cta />

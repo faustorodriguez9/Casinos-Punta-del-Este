@@ -28,9 +28,6 @@ export default function Header() {
           <a className="nav-link" href="#servicios">
             Servicios
           </a>
-          <a className="nav-link" href="#clientes">
-            Clientes
-          </a>
           <a className="nav-link" href="#blog">
             Actualidad
           </a>

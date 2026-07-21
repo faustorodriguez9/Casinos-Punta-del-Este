@@ -5,11 +5,11 @@ export default async function NewsSection() {
   const news = await getNews();
 
   return (
-    <section className="section-light" id="blog">
+    <section className="section-dark" id="blog">
       <div className="container">
         <div className="blog__head">
           <div>
-            <span className="eyebrow-light">Actualidad</span>
+            <span className="eyebrow-dark">Actualidad</span>
             <h2 className="blog__title">Últimas noticias del sector</h2>
           </div>
           <a

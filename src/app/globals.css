@@ -633,18 +633,18 @@ button {
   font-weight: 600;
   line-height: 1.08;
   margin: 18px 0 0;
-  color: #0c1e3a;
+  color: #eef4fb;
 }
 
 .blog__viewall {
   font-size: 15px;
-  color: #2f6fb5;
+  color: #7cc0f0;
   font-weight: 500;
   white-space: nowrap;
 }
 
 .blog__viewall:hover {
-  color: #0c1e3a;
+  color: #eef4fb;
 }
 
 .blog__grid {
