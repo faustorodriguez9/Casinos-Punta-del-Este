@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import NewsSection from "@/components/NewsSection";
 import ConsultModal from "@/components/ConsultModal";
 import { ConsultModalProvider } from "@/components/ConsultModalContext";
-import { Metrics, Servicios, Equipo, Cta, Footer } from "@/components/Sections";
+import { Metrics, Servicios, Equipo, IndustriaLocal, Cta, Footer } from "@/components/Sections";
 
 // Revalidate the RSS-backed news section every hour (ISR) so Yogonet's
 // latest articles get incorporated automatically.
@@ -19,6 +19,7 @@ export default function Home() {
         <Servicios />
         <NewsSection />
         <Equipo />
+        <IndustriaLocal />
         <Cta />
       </main>
       <Footer />

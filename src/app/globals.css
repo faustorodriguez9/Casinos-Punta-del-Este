@@ -881,6 +881,94 @@ button {
   padding: 8px 20px;
 }
 
+/* Industria Local */
+.industria__head {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.industria__title {
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.08;
+  color: #eef4fb;
+  margin: 18px 0 0;
+}
+
+.casinos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.casino-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #cddcec;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.casino-card:hover {
+  border-color: #4a90d9;
+  transform: translateY(-5px);
+  box-shadow: 0 24px 50px -30px rgba(12, 30, 58, 0.4);
+}
+
+.casino-card__logo {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: #f4f8fc;
+  border-bottom: 1px solid #e2ebf5;
+}
+
+.casino-card__logo img {
+  max-height: 78px;
+  max-width: 78%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.casino-card__body {
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.casino-card__name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0c1e3a;
+  margin: 0 0 12px;
+}
+
+.casino-card__desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #56708f;
+  margin: 0;
+}
+
+.casino-card__cta {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 22px;
+  padding: 11px 22px;
+  background: #4a90d9;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
 /* CTA */
 .cta {
   padding: 160px 64px;
@@ -1171,7 +1259,8 @@ button {
     border-right: none;
   }
   .services__grid,
-  .equipo__grid {
+  .equipo__grid,
+  .casinos__grid {
     grid-template-columns: 1fr;
   }
   .cipriani-card {

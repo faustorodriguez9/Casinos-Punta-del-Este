@@ -250,6 +250,62 @@ export function Equipo() {
   );
 }
 
+/* -------------------------------------------------------- Industria Local */
+const CASINOS = [
+  {
+    name: "Casino Punta Shopping",
+    logo: "/assets/casino-punta-shopping.svg",
+    url: "https://puntashopping.com.uy/casino/",
+    desc: "El casino del principal centro comercial de Punta del Este. Slots y mesas en un entorno con más de 150 marcas, gastronomía y entretenimiento para toda la familia.",
+  },
+  {
+    name: "Casino Nogaró",
+    logo: "/assets/casino-nogaro.png",
+    url: "https://www.casinonogaro.com/",
+    desc: "Un centro de entretenimiento en plena península de Punta del Este: casino de diseño de vanguardia, gastronomía, teatro y apuestas deportivas.",
+  },
+  {
+    name: "Enjoy Punta del Este",
+    logo: "/assets/casino-enjoy.png",
+    url: "https://enjoypuntadeleste.uy/casino",
+    desc: "El casino más emblemático de Punta del Este, al estilo Las Vegas. Amplia oferta de slots y mesas, torneos internacionales y grandes premios todo el año.",
+  },
+];
+
+export function IndustriaLocal() {
+  return (
+    <section className="section-dark" id="industria">
+      <div className="container">
+        <div className="industria__head">
+          <span className="eyebrow-dark">Industria Local</span>
+          <h2 className="industria__title">Los grandes casinos de Punta del Este</h2>
+        </div>
+        <div className="casinos__grid">
+          {CASINOS.map((c) => (
+            <a
+              className="casino-card"
+              key={c.name}
+              href={c.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="casino-card__logo">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={c.logo} alt={c.name} />
+              </div>
+              <div className="casino-card__body">
+                <h3 className="casino-card__name">{c.name}</h3>
+                <p className="casino-card__desc">{c.desc}</p>
+                <span className="casino-card__cta">Visitar sitio →</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* -------------------------------------------------------------------- CTA */
 export function Cta() {
   return (
