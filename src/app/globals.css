@@ -92,7 +92,7 @@ button {
 
 .header__logo {
   width: auto;
-  height: 128px;
+  height: 100px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
