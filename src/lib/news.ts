@@ -15,8 +15,9 @@ export type NewsItem = {
 const YOGONET = {
   source: "Yogonet",
   logo: "/assets/logo_central_180.png.webp",
-  siteUrl: "https://www.yogonet.com/latinoamerica/",
-  feed: "https://www.yogonet.com/latinoamerica/rss.xml",
+  siteUrl: "https://www.yogonet.com/latinoamerica/uruguay/",
+  // Feed específico de Uruguay (solo noticias del país).
+  feed: "https://www.yogonet.com/latinoamerica/uruguay/rss.xml",
 };
 
 /**

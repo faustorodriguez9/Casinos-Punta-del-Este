@@ -14,7 +14,7 @@ export default async function NewsSection() {
           </div>
           <a
             className="blog__viewall"
-            href="https://www.yogonet.com/latinoamerica/"
+            href="https://www.yogonet.com/latinoamerica/uruguay/"
             target="_blank"
             rel="noopener noreferrer"
           >
